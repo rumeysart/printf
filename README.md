@@ -13,27 +13,22 @@ ________
 ***************************
 <stdarg.h> şu metodları içerir::
 ***************************
-___________________________
->>va_start(va_list ap, argN)<<        Bu, variadic fonksiyon argümanlarına erişim sağlar. Burada *va_list* variadic fonksiyondaki 
-___________________________
-son sabit argümanın işaretçisi olacaktır. *argN* variadic fonksiyondaki son sabit argümandır. 
+
+>>va_start(va_list ap, argN)<<  Bu, variadic fonksiyon argümanlarına erişim sağlar. Burada *va_list* variadic fonksiyondaki son sabit argümanın işaretçisi olacaktır. *argN* variadic fonksiyondaki son sabit argümandır. 
 Yukarıdaki variadic fonksiyondan (fonk_adı (veri_tipi değişken_adı,…);), değişken_adı, onu argN yapan son sabit argümandır. Oysa *va_list ap* argN'ye (değişken_adı) bir işaretçi olacaktır.
 
 ________________________
 >>va_arg(va_list ap, type)<<         Bu, bir sonraki variadic fonksiyon argümanına erişir. *va_list ap* yukarıdakiyle 
 --------------------------------------- aynıdır, yani  argN'ye bir işaretçi *type*, *va_list ap*'nin beklenen veri türünü belirtir (double, float, int vb.)  
-
-
 _________________________________
 >>va_copy(va_list dest, va_list src)<<     Bu, variadic fonksiyon argümanlarının bir kopyasını oluşturur.
 -----------------------------------------------------
-____________________
 >>va_end(va_list ap)<<	  Bu, variadic fonksiyon argümanlarının geçişini sona erdirir.
 --------------------------------
 
 Burada va_list, va_start, va_arg, va_end ve va_copy'nin ihtiyaç duyduğu bilgileri tutar.
 
-#-----------------------------------------------------------------#
+-----------------------------------------------------------------
 
 write(1, &"0123456789"[a % 10], 1);
 write() fonksiyonu, bir veriyi standart çıktıya yazar. Bu fonksiyon, üç parametre alır:
